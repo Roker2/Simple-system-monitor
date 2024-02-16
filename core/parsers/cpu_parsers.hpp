@@ -1,5 +1,5 @@
 #pragma once
-#include "parser.hpp"
+#include "interfaces/cpu_parser.h"
 #include <vector>
 
 /*
@@ -21,18 +21,6 @@ struct CPUTimes
     }
     CPUTimes operator-(const CPUTimes& other);
     float usage();
-};
-
-
-class CPUParser : public Parser
-{
-public:
-    typedef std::unique_ptr<CPUParser> pointer;
-    virtual void parse() = 0;
-    virtual void update() = 0;
-    virtual float getLoad(size_t core) const = 0;
-    virtual size_t getCpuCount() const = 0;
-    virtual uint64_t getTotalWorkTime() const = 0;
 };
 
 class StatFileCPUParser : public CPUParser
