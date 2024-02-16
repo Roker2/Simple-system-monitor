@@ -55,6 +55,7 @@ HEADERS += \
     core/parsers/interfaces/cpu_parser.h \
     core/parsers/interfaces/hdd_parser.h \
     core/parsers/interfaces/memory_parser.h \
+    core/parsers/interfaces/network_parser.h \
     widgets/totalwidget.hpp \
     systemmonitor.hpp \
     widgets/emulateablewidget.hpp \
