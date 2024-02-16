@@ -1,5 +1,7 @@
 #include "hddinfo.hpp"
 
+#include "parsers/linux/hdd_parser.hpp"
+
 HddInfo::pointer HddInfo::makeInLinuxWay()
 {
     HddInfo::pointer info(new HddInfo());
