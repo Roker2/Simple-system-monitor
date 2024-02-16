@@ -1,6 +1,6 @@
 QT += gui core widgets testlib
 
-CONFIG += c++11
+CONFIG += c++17
 CONFIG -= app_bundle
 LIBS += -lstdc++fs
 
