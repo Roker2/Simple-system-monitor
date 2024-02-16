@@ -1,5 +1,5 @@
 #pragma once
-#include "parsers/hdd_parsers.hpp"
+#include "parsers/linux/hdd_parser.hpp"
 
 class HddInfo
 {

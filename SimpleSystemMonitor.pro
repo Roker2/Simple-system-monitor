@@ -21,6 +21,7 @@ SOURCES += main.cpp \
     core/cpuinfo.cpp \
     core/meminfo.cpp \
     core/netinfo.cpp \
+    core/parsers/linux/hdd_parser.cpp \
     widgets/totalwidget.cpp \
     systemmonitor.cpp \
     widgets/cpuwidget.cpp \
@@ -39,7 +40,6 @@ SOURCES += main.cpp \
     core/hddinfo.cpp \
     core/procinfo.cpp \
     core/parsers/processes_parsers.cpp \
-    core/parsers/hdd_parsers.cpp \
     charts/PieChart/labeled_piechart.cpp \
     charts/PieChart/piechart.cpp \
     widgets/configurablewidget.cpp \
@@ -52,6 +52,7 @@ HEADERS += \
     core/cpuinfo.hpp \
     core/meminfo.hpp \
     core/netinfo.hpp \
+    core/parsers/linux/hdd_parser.hpp \
     core/parsers/interfaces/parser.hpp \
     core/parsers/interfaces/cpu_parser.h \
     core/parsers/interfaces/hdd_parser.h \
@@ -79,7 +80,6 @@ HEADERS += \
     core/hddinfo.hpp \
     core/procinfo.hpp \
     core/parsers/processes_parsers.hpp \
-    core/parsers/hdd_parsers.hpp \
     charts/PieChart/labeled_piechart.hpp \
     charts/PieChart/piechart.hpp \
     widgets/configurablewidget.hpp \
