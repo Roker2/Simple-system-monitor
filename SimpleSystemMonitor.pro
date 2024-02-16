@@ -53,6 +53,7 @@ HEADERS += \
     core/meminfo.hpp \
     core/netinfo.hpp \
     core/parsers/interfaces/cpu_parser.h \
+    core/parsers/interfaces/hdd_parser.h \
     widgets/totalwidget.hpp \
     systemmonitor.hpp \
     widgets/emulateablewidget.hpp \
