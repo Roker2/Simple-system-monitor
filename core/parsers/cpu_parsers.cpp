@@ -1,5 +1,8 @@
 #include "cpu_parsers.hpp"
 
+#include "parseerror.hpp"
+#include <fstream>
+
 /*
  * CPU is loaded when it is not idling
 */

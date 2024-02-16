@@ -1,5 +1,7 @@
 #include "infomanager.hpp"
 
+#include "core/parsers/parseerror.hpp"
+
 /*
     Creates instances of all *info types.
     Those bool init* flags was added half for testing purpose, half for possibility to enable/disable widgets in settings.

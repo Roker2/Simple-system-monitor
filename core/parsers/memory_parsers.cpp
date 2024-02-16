@@ -1,5 +1,8 @@
 #include "memory_parsers.hpp"
 
+#include "parseerror.hpp"
+#include <fstream>
+
 // throws on error
 MeminfoMemoryParser::MeminfoMemoryParser(const std::string& _meminfoFile)
     : meminfoFile(_meminfoFile)

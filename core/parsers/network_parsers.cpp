@@ -1,5 +1,8 @@
 #include "network_parsers.hpp"
 
+#include "parseerror.hpp"
+#include <fstream>
+
 NetstatNetworkParser::NetstatNetworkParser(const std::string &_netstatFile)
     : netstatFile{_netstatFile} {}
 
