@@ -1,9 +1,12 @@
-#include <gtest/gtest.h>
 #include <QtTest>
 #include <QtCore>
 #include <QtWidgets>
 #include <QtGui>
 #include "systemmonitor.hpp"
+
+#ifdef BUILD_WITH_TESTS
+#include <gtest/gtest.h>
+#endif
 
 const QString GlobalStylesheet = QString(
                                  "QProgressBar {text-align: center;}"
@@ -31,7 +34,7 @@ int main(int argc, char *argv[])
     app.setApplicationName("Simple_system_monitor");
     QSettings::setDefaultFormat(QSettings::IniFormat);
 
-#ifdef QT_DEBUG
+#if defined(QT_DEBUG) && defined(BUILD_WITH_TESTS)
     // core tests
     ::testing::InitGoogleTest(&argc, argv);
     int err =  RUN_ALL_TESTS();
