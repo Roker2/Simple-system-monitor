@@ -5,7 +5,7 @@
 #include <cstring>
 #include <filesystem>
 
-namespace fs = std::experimental::filesystem;
+namespace fs = std::filesystem;
 
 const int exNameSize = 16;
 struct LinuxProcInfo
