@@ -4,6 +4,7 @@
 #include <unordered_map>
 #include <vector>
 #include <queue>
+#include <string>
 
 class NetstatNetworkParser : public NetworkParser
 {

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "core/parsers/parser.hpp"
+#include "parser.hpp"
 
 struct MemoryInfo
 {

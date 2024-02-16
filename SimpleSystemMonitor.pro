@@ -52,6 +52,7 @@ HEADERS += \
     core/cpuinfo.hpp \
     core/meminfo.hpp \
     core/netinfo.hpp \
+    core/parsers/interfaces/parser.hpp \
     core/parsers/interfaces/cpu_parser.h \
     core/parsers/interfaces/hdd_parser.h \
     core/parsers/interfaces/memory_parser.h \
@@ -74,7 +75,6 @@ HEADERS += \
     core/parsers/memory_parsers.hpp \
     core/parsers/network_parsers.hpp \
     core/parsers/parseerror.hpp \
-    core/parsers/parser.hpp \
     infomanager.hpp \
     core/hddinfo.hpp \
     core/procinfo.hpp \

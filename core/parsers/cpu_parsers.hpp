@@ -1,6 +1,8 @@
 #pragma once
+
 #include "interfaces/cpu_parser.h"
 #include <vector>
+#include <string>
 
 /*
     Has values of CPU state in this moment(times for different activities).

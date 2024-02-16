@@ -1,5 +1,7 @@
 #pragma once
+
 #include "interfaces/memory_parser.h"
+#include <string>
 
 #ifdef __linux__
 #include <unistd.h>
