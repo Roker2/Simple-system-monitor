@@ -2,12 +2,22 @@
 
 #include "parseerror.hpp"
 #include <fstream>
+#ifdef _MSC_VER
+#include <Windows.h>
+#include <sysinfoapi.h>
+#endif
 
 // throws on error
 MeminfoMemoryParser::MeminfoMemoryParser(const std::string& _meminfoFile)
     : meminfoFile(_meminfoFile)
 {
+#ifdef __linux__
     pageSize = sysconf(_SC_PAGESIZE);
+#elif defined(_MSC_VER)
+    SYSTEM_INFO sysInfo;
+    GetSystemInfo(&sysInfo);
+    pageSize = sysInfo.dwPageSize;
+#endif
 }
 
 void MeminfoMemoryParser::parse()
