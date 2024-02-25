@@ -21,7 +21,6 @@ SOURCES += main.cpp \
     core/cpuinfo.cpp \
     core/meminfo.cpp \
     core/netinfo.cpp \
-    core/parsers/linux/hdd_parser.cpp \
     widgets/totalwidget.cpp \
     systemmonitor.cpp \
     widgets/cpuwidget.cpp \
@@ -52,7 +51,6 @@ HEADERS += \
     core/cpuinfo.hpp \
     core/meminfo.hpp \
     core/netinfo.hpp \
-    core/parsers/linux/hdd_parser.hpp \
     core/parsers/interfaces/parser.hpp \
     core/parsers/interfaces/cpu_parser.h \
     core/parsers/interfaces/hdd_parser.h \
@@ -87,6 +85,22 @@ HEADERS += \
     widgets/processwidget/processwidgetmodel.hpp \
     widgets/processwidget/processeswidget.hpp \
     system/system.hpp
+
+win32 {
+SOURCES += \
+    core/parsers/windows/hdd_parser.cpp
+
+HEADERS += \
+    core/parsers/windows/hdd_parser.h
+}
+
+unix {
+SOURCES += \
+    core/parsers/linux/hdd_parser.cpp
+
+HEADERS += \
+    core/parsers/linux/hdd_parser.hpp
+}
 
 TRANSLATIONS += \
     translation.ts
