@@ -1,6 +1,6 @@
-#include "cpu_parsers.hpp"
+#include "cpu_parser.hpp"
 
-#include "parseerror.hpp"
+#include "core/parsers/parseerror.hpp"
 #include <fstream>
 
 /*

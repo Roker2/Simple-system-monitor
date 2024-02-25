@@ -1,5 +1,8 @@
 #pragma once
-#include "parsers/cpu_parsers.hpp"
+
+#include "core/parsers/interfaces/cpu_parser.h"
+#include <string>
+#include <memory>
 
 /*
     WARNING: cpuInfoCount and size of load vector is always core count + 1

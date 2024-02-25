@@ -1,6 +1,6 @@
 #pragma once
 
-#include "interfaces/cpu_parser.h"
+#include "core/parsers/interfaces/cpu_parser.h"
 #include <vector>
 #include <string>
 

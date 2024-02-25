@@ -10,7 +10,11 @@ TotalWidget::TotalWidget(InfoManager::pointer _infoManager, QWidget *parent)
 
 void TotalWidget::createWidgets()
 {
+#ifdef __linux__
     coreCount = (!infoManager->isCpuInfoInitialized()) ? 0 : infoManager->cpuCount() - 1;
+#elif defined(_MSC_VER)
+    coreCount = (!infoManager->isCpuInfoInitialized()) ? 0 : infoManager->cpuCount();
+#endif
 
     memoryLabel =           new QLabel(tr("Memory"));
     memoryTotalLabel =      new QLabel(tr("Total: "));
