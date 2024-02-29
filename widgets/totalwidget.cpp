@@ -164,7 +164,11 @@ void TotalWidget::updateCpuLabels()
     cpuTotalInfoLabel->setText(QString::number(infoManager->getLoad(0), 'd', dataPrecision) + "%");
     for(int i = 0; i < coreCount; ++i)
     {
+#ifdef __linux__
         float usage = infoManager->getLoad(i + 1);
+#elif defined(_MSC_VER)
+        float usage = infoManager->getLoad(i);
+#endif
         coreLabels[i].second->setText(QString::number(usage, 'd', dataPrecision) + "%");
         corePBs[i]->setValue(std::round(usage));
         updatePBStyle(corePBs[i]);
