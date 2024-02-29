@@ -1,5 +1,6 @@
 #include "cpu_parser.h"
 
+#include "core/parsers/parseerror.hpp"
 #include <sysinfoapi.h>
 
 WinCpuParser::WinCpuParser()
@@ -21,6 +22,11 @@ void WinCpuParser::parse()
     NTSTATUS status;
     status = _pNtQuerySystemInformation(SystemProcessorPerformanceInformation, a,
                                         sizeof(SYSTEM_PROCESSOR_PERFORMANCE_INFORMATION) * _CPUCount, nullptr);
+    if (NT_ERROR(status))
+    {
+        throw CPUParseError("WinCpuParser::parse(): failed to get CPU perfomance information");
+    }
+
     if (_coresUsage.size() != _CPUCount)
     {
         _coresUsage.resize(_CPUCount);
