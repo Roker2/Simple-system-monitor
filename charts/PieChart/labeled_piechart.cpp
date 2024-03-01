@@ -105,6 +105,7 @@ void LabeledPiechart::clearLayout(QLayout* layout)
         {
             clearLayout(item->layout());
             delete item->layout();
+            continue;
         }
         if (item->widget())
         {
