@@ -1,5 +1,12 @@
 #pragma once
-#include "parsers/memory_parsers.hpp"
+
+#ifdef __linux__
+#include "parsers/linux/memory_parser.hpp"
+#elif defined(_MSC_VER)
+#include "parsers/windows/memory_parser.h"
+#endif
+
+#include <string>
 
 /*
     Main memory info

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "interfaces/memory_parser.h"
+#include "core/parsers/interfaces/memory_parser.h"
 #include <string>
 
 #ifdef __linux__

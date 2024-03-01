@@ -32,7 +32,6 @@ SOURCES += main.cpp \
     utils.cpp \
     widgets/networkwidget.cpp \
     widgets/optionswidget.cpp \
-    core/parsers/memory_parsers.cpp \
     core/parsers/network_parsers.cpp \
     infomanager.cpp \
     core/hddinfo.cpp \
@@ -69,7 +68,6 @@ HEADERS += \
     settings.hpp \
     charts/chartsnamespace.hpp \
     applicationnamespace.hpp \
-    core/parsers/memory_parsers.hpp \
     core/parsers/network_parsers.hpp \
     core/parsers/parseerror.hpp \
     infomanager.hpp \
@@ -87,21 +85,25 @@ HEADERS += \
 win32 {
 SOURCES += \
     core/parsers/windows/cpu_parser.cpp \
-    core/parsers/windows/hdd_parser.cpp
+    core/parsers/windows/hdd_parser.cpp \
+    core/parsers/windows/memory_parser.cpp
 
 HEADERS += \
     core/parsers/windows/cpu_parser.h \
-    core/parsers/windows/hdd_parser.h
+    core/parsers/windows/hdd_parser.h \
+    core/parsers/windows/memory_parser.h
 }
 
 unix {
 SOURCES += \
     core/parsers/linux/cpu_parser.cpp \
-    core/parsers/linux/hdd_parser.cpp
+    core/parsers/linux/hdd_parser.cpp \
+    core/parsers/linux/memory_parser.cpp
 
 HEADERS += \
     core/parsers/linux/cpu_parser.hpp \
-    core/parsers/linux/hdd_parser.hpp
+    core/parsers/linux/hdd_parser.hpp \
+    core/parsers/linux/memory_parser.hpp
 }
 
 TRANSLATIONS += \

@@ -3,7 +3,11 @@
 MemInfo::pointer MemInfo::fromMemInfoFile(const std::string& infoFile)
 {
     MemInfo::pointer newMemInfo(new MemInfo());
+#ifdef __linux__
     newMemInfo->parser = MeminfoMemoryParser::pointer(new MeminfoMemoryParser(infoFile));
+#elif defined(_MSC_VER)
+    newMemInfo->parser = WinMemoryParser::pointer(new WinMemoryParser());
+#endif
     newMemInfo->parse();
     return newMemInfo;
 }
