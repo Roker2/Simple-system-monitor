@@ -17,7 +17,7 @@ void MemInfo::update()
     parser->update();
     MemoryInfo meminfo = parser->getMemoryInfo();
     memTotal = meminfo.memoryTotal;
-    memAvailable = meminfo.memoryTotal - meminfo.memoryFree;
+    memAvailable = meminfo.memoryFree;
     swapTotal = meminfo.swapTotal;
     swapFree = meminfo.swapFree;
 }

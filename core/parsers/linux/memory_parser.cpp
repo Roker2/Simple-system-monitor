@@ -32,7 +32,7 @@ void MeminfoMemoryParser::parse()
         {
             parsed = true;
             ifs >> value;
-            memoryInfo.memoryFree = memoryInfo.memoryTotal - std::stoull(value);
+            memoryInfo.memoryFree = std::stoull(value);
         }
         else if(key == "SwapTotal:")
         {
