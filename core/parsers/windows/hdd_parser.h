@@ -13,6 +13,9 @@ public:
     inline const DeviceActivity& getDeviceActivity() const final { return deviceActivity; }
 
 private:
+    void parseDrives();
+
+private:
     DeviceInfoMap deviceInfoMap;
     DeviceActivity deviceActivity;
 };
